@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/QmlMainView.qml</file>
+        <file>qml/QmlMainViewFrame.qml</file>
+        <file>qml/QmlSlider.qml</file>
+        <file>qml/QmlViewVacuum.qml</file>
+        <file>qml/QmlViewEMS.qml</file>
+        <file>qml/QmlViewGalwan.qml</file>
+        <file>qml/QmlImageButton.qml</file>
+        <file>qml/QmlViewProgramSelect.qml</file>
+        <file>qml/QmlTextButton.qml</file>
+        <file>qml/QmlConnectionControl.qml</file>
+        <file>img/bluetooth_gray.png</file>
+        <file>img/bluetooth_red.png</file>
+        <file>img/bluetooth_green.png</file>
+        <file>img/bluetooth_blue.png</file>
+        <file>img/logo_with_bg.png</file>
+        <file>img/splash_with_bg.png</file>
+        <file>img/splash_no_bg.png</file>
+        <file>img/logo_no_bg.png</file>
+        <file>img/icon.png</file>
+    </qresource>
+</RCC>
