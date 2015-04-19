@@ -58,30 +58,6 @@ CQmlMainView
 		height: id_mainView.height
 //		anchors.fill: id_mainView
 	}
-
-	QmlViewInfusion
-	{
-		id: id_Infusion
-		objectName: id_mainView.objectName + "_ViewInfusion"
-		x: 0
-		y: 0
-		width: id_mainView.width
-		height: id_mainView.height
-//		anchors.fill: id_mainView
-	}
-
-	QmlViewPeelJet
-	{
-		id: id_PeelJet
-		objectName: id_mainView.objectName + "_ViewPeelJet"
-		x: 0
-		y: 0
-		width: id_mainView.width
-		height: id_mainView.height
-//		anchors.fill: id_mainView
-	}
-
-
 	QmlConnectionControl
 	{
 		id: id_connectionControl

@@ -19,5 +19,8 @@
         <file>img/splash_no_bg.png</file>
         <file>img/logo_no_bg.png</file>
         <file>img/icon.png</file>
+        <file>qml/QmlViewMainSelection.qml</file>
+        <file>qml/QmlViewInfusion.qml</file>
+        <file>qml/QmlViewPeelJet.qml</file>
     </qresource>
 </RCC>

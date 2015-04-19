@@ -4,7 +4,7 @@ CQmlViewProgramSelect::CQmlViewProgramSelect(QQuickItem *parent)
 	: CQmlViewBase(parent)
 	, m_pButtonEMS( 0 )
 	, m_pButtonGalwan( 0 )
-	, m_pButtonQuit( 0 )
+	, m_pButtonBack( 0 )
 	, m_pButtonVacuum( 0 )
 {
 }
@@ -13,7 +13,7 @@ void CQmlViewProgramSelect::Initialize()
 {
 	m_pButtonEMS = findChild<CQmlTextButton*>( objectName() + "_ButtonEMS" );
 	m_pButtonGalwan = findChild<CQmlTextButton*>( objectName() + "_Galwan" );
-	m_pButtonQuit = findChild<CQmlTextButton*>( objectName() + "_ButtonQuit" );
+	m_pButtonBack = findChild<CQmlTextButton*>( objectName() + "_ButtonQuit" );
 	m_pButtonVacuum = findChild<CQmlTextButton*>( objectName() + "_ButtonVacuum" );
 	if ( m_pButtonEMS )
 	{
@@ -31,13 +31,13 @@ void CQmlViewProgramSelect::Initialize()
 		connect( m_pButtonGalwan, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
 		connect( m_pButtonGalwan, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
 	}
-	if ( m_pButtonQuit )
+	if ( m_pButtonBack )
 	{
-		m_pButtonQuit->SetPressedColor( MyCommon::COLOR_DARK_RED );
-		m_pButtonQuit->SetNormalColor( MyCommon::COLOR_RED );
-		m_pButtonQuit->SetButtonText( QObject::tr( "Wyjście" ) );
-		connect( m_pButtonQuit, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
-		connect( m_pButtonQuit, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
+		m_pButtonBack->SetPressedColor( MyCommon::COLOR_DARK_RED );
+		m_pButtonBack->SetNormalColor( MyCommon::COLOR_RED );
+		m_pButtonBack->SetButtonText( QObject::tr( "Powrót" ) );
+		connect( m_pButtonBack, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
+		connect( m_pButtonBack, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
 	}
 	if ( m_pButtonVacuum )
 	{
@@ -61,9 +61,9 @@ void CQmlViewProgramSelect::slotClicked(CClickableObject* a_pClickedObject)
 		{
 			ManageButtonGalwanClicked( 500, 50 );
 		}
-		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonQuit )
+		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonBack )
 		{
-			qApp->quit();
+			ManageButtonBackClicked( 700, 500 );
 		}
 		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonVacuum )
 		{
@@ -84,9 +84,9 @@ void CQmlViewProgramSelect::slotClicked( CClickableObject* a_pClickedObject, flo
 		{
 			ManageButtonGalwanClicked( a_fMouseX, a_fMouseY );
 		}
-		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonQuit )
+		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonBack )
 		{
-			qApp->quit();
+			ManageButtonBackClicked( a_fMouseX, a_fMouseY );
 		}
 		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonVacuum )
 		{
@@ -111,4 +111,9 @@ void CQmlViewProgramSelect::ManageButtonVacuumClicked( float a_fMouseX, float a_
 {
 	slotSendMessage( "VACONLY" );
 	emit signalShowVacuum( a_fMouseX, a_fMouseY );
+}
+
+void CQmlViewProgramSelect::ManageButtonBackClicked( float a_fMouseX, float a_fMouseY )
+{
+	emit signalBackToMainSelectionView( a_fMouseX, a_fMouseY );
 }

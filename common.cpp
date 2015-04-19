@@ -6,6 +6,12 @@ const QColor MyCommon::COLOR_LIGHT_RED = QColor( 0xff, 0x85, 0x63 );
 const QColor MyCommon::COLOR_RED = QColor( "#bf4624" );
 const QColor MyCommon::COLOR_DARK_RED = QColor( 0x66, 0x20, 0x0d );
 
+const QColor MyCommon::COLOR_SELEDIN = QColor( "#8dbba6" );
+const QColor MyCommon::COLOR_DARK_SELEDIN = QColor( "#6e9d8a" );
+
+const QColor MyCommon::COLOR_SHIT_YELLOW = QColor( "#d7d8a1" );
+const QColor MyCommon::COLOR_SHIT_VIOLET = QColor( "#8d9abb" );
+
 const QColor MyCommon::COLOR_LIGHT_VIOLET = QColor( 0xa4, 0x63, 0xff );
 const QColor MyCommon::COLOR_VIOLET = QColor( 0x7c, 0x27, 0xa3 );
 const QColor MyCommon::COLOR_DARK_VIOLET = QColor( 0x3c, 0x15, 0x6b );
@@ -62,6 +68,26 @@ QColor MyCommon::GetCOLOR_RED() const
 QColor MyCommon::GetCOLOR_DARK_RED() const
 {
 	return COLOR_DARK_RED;
+}
+
+QColor MyCommon::GetCOLOR_SHIT_YELLOW() const
+{
+	return COLOR_SHIT_YELLOW;
+}
+
+QColor MyCommon::GetCOLOR_SHIT_VIOLET() const
+{
+	return COLOR_SHIT_VIOLET;
+}
+
+QColor MyCommon::GetCOLOR_SELEDIN() const
+{
+	return COLOR_SELEDIN;
+}
+
+QColor MyCommon::GetCOLOR_DARK_SELEDIN() const
+{
+	return COLOR_DARK_SELEDIN;
 }
 
 QColor MyCommon::GetCOLOR_LIGHT_VIOLET() const

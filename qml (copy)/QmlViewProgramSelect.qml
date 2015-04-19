@@ -41,7 +41,7 @@ CQmlViewProgramSelect
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Shapeo"
+					text: "Wybór Programu"
 				}
 			}
 
@@ -93,6 +93,6 @@ CQmlViewProgramSelect
 	}
 	Component.onCompleted:
 	{
-		id_title.color = MyCommon.COLOR_SELEDIN
+		id_title.color = MyCommon.COLOR_RED
 	}
 }

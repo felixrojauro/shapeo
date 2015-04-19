@@ -20,6 +20,7 @@ public:
 signals:
 	void signalSendMessage( QString a_strMessage );
 	void signalBackToProgramSelectView( float a_fMouseX, float a_fMouseY );
+	void signalBackToMainSelectionView( float a_fMouseX, float a_fMouseY );
 public slots:
 	virtual void slotSendMessage( QString a_strMessage );
 	virtual void slotClicked( CClickableObject* a_pClickedObject ) = 0;

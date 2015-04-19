@@ -91,6 +91,11 @@ bool CFullScreenPopupAnimation::PrepareAnimation()
 */
 bool CFullScreenPopupAnimation::StartAnimation( bool a_bShow, int a_iDuration )
 {
+	if ( a_bShow == m_pTargetWidget->isVisible() && m_bShow == a_bShow )
+	{
+		qDebug()<<"m_pTargetWidget: "<<m_pTargetWidget->objectName()<<" my Z: "<<m_pTargetWidget->z()<<" already good";
+		return true;
+	}
 	if ( m_pRepositionXAnimation && m_pRepositionYAnimation && m_pScaleAnimation && m_pWidgetAnimation )
 	{
 		if ( m_pWidgetAnimation->state() != QAbstractAnimation::Stopped )
@@ -108,7 +113,9 @@ bool CFullScreenPopupAnimation::StartAnimation( bool a_bShow, int a_iDuration )
 
 		if ( a_bShow )
 		{
-			m_pTargetWidget->setZ( 5 );
+//			m_pTargetWidget->setZ( m_pTargetWidget->z() + 5 );
+			m_pTargetWidget->setVisible( true );
+			m_pTargetWidget->setEnabled( true );
 			m_pRepositionXAnimation->setStartValue( m_fWidgetBasePositionX );
 			m_pRepositionXAnimation->setEndValue( 0 );
 
@@ -142,7 +149,9 @@ void CFullScreenPopupAnimation::slotAnimationFinished()
 {
 	if ( !m_bShow )
 	{
-		m_pTargetWidget->setZ( 1 );
+//		m_pTargetWidget->setZ( m_pTargetWidget->z() - 5 );
+		m_pTargetWidget->setVisible( false );
+		m_pTargetWidget->setEnabled( false );
 	}
 	emit signalAnimationFinished( m_pTargetWidget, m_bShow );
 }

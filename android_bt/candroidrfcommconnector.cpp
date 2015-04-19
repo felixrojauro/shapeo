@@ -33,6 +33,10 @@ bool CAndroidRFCOMMConnector::slotConnect()
 	{
 		rfcomm.connect( DEVICE_NAME );
 	}
+	if ( !rfcomm.isConnected() )
+	{
+		rfcomm.connect( "=HC06" );
+	}
 	emit signalDuringConnection( false );
 	emit signalConnectFinished( rfcomm.isConnected() );
 	qDebug()<<"@@@@@@@@@@@@ CONNECTING FINISHED: "<<rfcomm.isConnected();
@@ -98,7 +102,7 @@ bool CAndroidRFCOMMConnector::CheckIfMyDeviceIsAvailable()
 		while (iterator.hasNext())
 		{
 			iterator.next();
-			if( iterator.value().contains( DEVICE_NAME ))
+			if( iterator.value().contains( DEVICE_NAME ) || iterator.value().contains( "=HC06" ) )
 			{
 //				qDebug()<<"found the device you are looking for";
 				return true;

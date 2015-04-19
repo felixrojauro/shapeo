@@ -9,6 +9,10 @@
 #include "cqmlviewgalwan.h"
 #include "cqmlviewprogramselect.h"
 #include "cqmlviewvacuum.h"
+#include "cqmlviewmainselection.h"
+#include "cqmlviewinfusion.h"
+#include "cqmlviewpeeljet.h"
+
 #include "cfullscreenpopupanimation.h"
 
 #include "android_bt/candroidrfcommconnector.h"
@@ -30,6 +34,11 @@ public slots:
 	void slotShowViewGalwan( float a_fMouseX, float a_fMouseY );
 	void slotShowViewVacuum( float a_fMouseX, float a_fMouseY );
 	void slotShowViewProgramSelect( float a_fMouseX, float a_fMouseY );
+
+	void slotShowViewMainSelection( float a_fMouseX, float a_fMouseY );
+	void slotShowViewInfusion( float a_fMouseX, float a_fMouseY );
+	void slotShowViewPeelJet( float a_fMouseX, float a_fMouseY );
+
 
 	void slotUpdateLifemark( QString a_strDeviceAnswer );
 	void slotValidateLifemark();
@@ -59,6 +68,10 @@ private:
 	CQmlViewGalwan*			m_pViewGalwan;
 	CQmlViewProgramSelect*	m_pViewProgramSelect;
 	CQmlViewVacuum*			m_pViewVacuum;
+
+	CQmlViewMainSelection*	m_pViewMainSelection;
+	CQmlViewInfusion*		m_pViewInfusion;
+	CQmlViewPeelJet*		m_pViewPeelJet;
 
 	QString m_strAppState;
 	bool m_bBTLifemarkOK;

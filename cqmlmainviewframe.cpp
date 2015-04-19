@@ -12,6 +12,9 @@
 #include "cqmlviewems.h"
 #include "cqmlviewgalwan.h"
 #include "cqmlviewvacuum.h"
+#include "cqmlviewmainselection.h"
+#include "cqmlviewpeeljet.h"
+#include "cqmlviewinfusion.h"
 #include "cqmlimagebutton.h"
 #include "cqmltextbutton.h"
 #include "common.h"
@@ -39,6 +42,9 @@ void CQmlMainViewFrame::registerCustomQMLTypes()
 	qmlRegisterType<CQmlViewGalwan>("MyCustoms", 1, 0, "CQmlViewGalwan");
 	qmlRegisterType<CQmlViewVacuum>("MyCustoms", 1, 0, "CQmlViewVacuum");
 	qmlRegisterType<CQmlViewProgramSelect>("MyCustoms", 1, 0, "CQmlViewProgramSelect");
+	qmlRegisterType<CQmlViewMainSelection>("MyCustoms", 1, 0, "CQmlViewMainSelection");
+	qmlRegisterType<CQmlViewPeelJet>("MyCustoms", 1, 0, "CQmlViewPeelJet");
+	qmlRegisterType<CQmlViewInfusion>("MyCustoms", 1, 0, "CQmlViewInfusion");
 
 }
 

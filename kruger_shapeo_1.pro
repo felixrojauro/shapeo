@@ -15,11 +15,15 @@ SOURCES += main.cpp \
     cqmlviewbase.cpp \
     cclickableobject.cpp \
 	cqmlviewprogramselect.cpp \
+	cqmlviewmainselection.cpp \
 	android_bt/androidrfcomm.cpp \
 	android_bt/candroidrfcommconnector.cpp \
     cqmlimagebutton.cpp \
     cqmltextbutton.cpp \
-    cfullscreenpopupanimation.cpp
+    cfullscreenpopupanimation.cpp \
+    cqmlviewpeeljet.cpp \
+    cqmlviewinfusion.cpp
+
 HEADERS += \
     clistitem.h \
     cqmlmainviewframe.h \
@@ -32,11 +36,14 @@ HEADERS += \
     cqmlviewbase.h \
     cclickableobject.h \
 	cqmlviewprogramselect.h \
+	cqmlviewmainselection.h \
 	android_bt/androidrfcomm.h \
 	android_bt/candroidrfcommconnector.h \
     cqmlimagebutton.h \
     cqmltextbutton.h \
-    cfullscreenpopupanimation.h
+    cfullscreenpopupanimation.h \
+    cqmlviewpeeljet.h \
+    cqmlviewinfusion.h
 
 RESOURCES += \
     resourceFile.qrc

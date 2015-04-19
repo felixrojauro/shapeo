@@ -4,9 +4,9 @@ import QtQuick.Controls.Styles 1.2
 import QtQuick.Layouts 1.1
 import MyCustoms 1.0
 
-CQmlViewProgramSelect
+CQmlViewMainSelection
 {
-	id: id_viewProgramSelect
+	id: id_viewMainSelection
 	MouseArea
 	{
 		anchors.fill: id_imagePS
@@ -14,7 +14,7 @@ CQmlViewProgramSelect
 	Image
 	{
 		id: id_imagePS
-		anchors.fill: id_viewProgramSelect
+		anchors.fill: id_viewMainSelection
 		source: "/img/logo_with_bg.png"
 		sourceSize.width: MyQMLEnums.SCREEN_WIDTH - 150
 		sourceSize.height: MyQMLEnums.SCREEN_HEIGHT - 300
@@ -26,7 +26,7 @@ CQmlViewProgramSelect
 			Rectangle
 			{
 				id: id_title
-				objectName: id_viewProgramSelect.objectName + "_Title"
+				objectName: id_viewMainSelection.objectName + "_Title"
 				width: MyQMLEnums.SCREEN_WIDTH
 				height: 100
 				anchors.top: id_layoutMain.top
@@ -41,7 +41,7 @@ CQmlViewProgramSelect
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Shapeo"
+					text: "Wybór Programu"
 				}
 			}
 
@@ -55,8 +55,8 @@ CQmlViewProgramSelect
 
 				QmlTextButton
 				{
-					id: id_button_Vacuum
-					objectName: id_viewProgramSelect.objectName + "_ButtonVacuum"
+					id: id_button_Infusion
+					objectName: id_viewMainSelection.objectName + "_ButtonInfusion"
 
 					height: MyQMLEnums.SCREEN_HEIGHT / 6
 					width: MyQMLEnums.SCREEN_WIDTH / 5
@@ -64,8 +64,8 @@ CQmlViewProgramSelect
 
 				QmlTextButton
 				{
-					id: id_button_Galwan
-					objectName: id_viewProgramSelect.objectName + "_Galwan"
+					id: id_button_PeelJet
+					objectName: id_viewMainSelection.objectName + "_ButtonPeelJet"
 
 					height: MyQMLEnums.SCREEN_HEIGHT / 6
 					width: MyQMLEnums.SCREEN_WIDTH / 5
@@ -73,8 +73,8 @@ CQmlViewProgramSelect
 
 				QmlTextButton
 				{
-					id: id_button_EMS
-					objectName: id_viewProgramSelect.objectName + "_ButtonEMS"
+					id: id_button_Shapeo
+					objectName: id_viewMainSelection.objectName + "_ButtonShapeo"
 
 					height: MyQMLEnums.SCREEN_HEIGHT / 6
 					width: MyQMLEnums.SCREEN_WIDTH / 5
@@ -82,7 +82,7 @@ CQmlViewProgramSelect
 				QmlTextButton
 				{
 					id: id_button_Quit
-					objectName: id_viewProgramSelect.objectName + "_ButtonQuit"
+					objectName: id_viewMainSelection.objectName + "_ButtonQuit"
 
 					height: MyQMLEnums.SCREEN_HEIGHT / 6
 					width: MyQMLEnums.SCREEN_WIDTH / 6
@@ -93,6 +93,6 @@ CQmlViewProgramSelect
 	}
 	Component.onCompleted:
 	{
-		id_title.color = MyCommon.COLOR_SELEDIN
+		id_title.color = MyCommon.COLOR_RED
 	}
 }
