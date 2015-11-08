@@ -40,7 +40,7 @@ CQmlViewGalwan
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Galwan"
+					text: "Natlenianie"
 				}
 
 			}

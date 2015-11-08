@@ -63,7 +63,7 @@ void CQmlViewProgramSelect::slotClicked(CClickableObject* a_pClickedObject)
 		}
 		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonQuit )
 		{
-			qApp->quit();
+			ManageButtonQuitClicked( 750, 50 );
 		}
 		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonVacuum )
 		{
@@ -86,7 +86,8 @@ void CQmlViewProgramSelect::slotClicked( CClickableObject* a_pClickedObject, flo
 		}
 		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonQuit )
 		{
-			qApp->quit();
+			ManageButtonQuitClicked( a_fMouseX, a_fMouseY );
+//			qApp->quit();
 		}
 		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonVacuum )
 		{
@@ -111,4 +112,10 @@ void CQmlViewProgramSelect::ManageButtonVacuumClicked( float a_fMouseX, float a_
 {
 	slotSendMessage( "VACONLY" );
 	emit signalShowVacuum( a_fMouseX, a_fMouseY );
+}
+
+void CQmlViewProgramSelect::ManageButtonQuitClicked( float a_fMouseX, float a_fMouseY )
+{
+	slotShowMainProgramSelect( a_fMouseX, a_fMouseY );
+//	qApp->quit();
 }

@@ -43,7 +43,7 @@ CQmlViewEMS
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "ElektroStymulacja"
+					text: "Oxy Massage"
 				}
 
 			}

@@ -45,7 +45,7 @@ CQmlViewVacuum
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Vacuum"
+					text: "Infuzja"
 				}
 
 			}

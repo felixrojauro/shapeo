@@ -26,11 +26,11 @@ public:
 	void SetAppState( QString a_strNewState );
 
 public slots:
-	void slotShowViewEMS( float a_fMouseX, float a_fMouseY );
-	void slotShowViewGalwan( float a_fMouseX, float a_fMouseY );
-	void slotShowViewVacuum( float a_fMouseX, float a_fMouseY );
-	void slotShowViewProgramSelect( float a_fMouseX, float a_fMouseY );
-
+	void slotShowViewEMS				( float a_fMouseX, float a_fMouseY );
+	void slotShowViewGalwan				( float a_fMouseX, float a_fMouseY );
+	void slotShowViewVacuum				( float a_fMouseX, float a_fMouseY );
+	void slotShowViewProgramSelect		( float a_fMouseX, float a_fMouseY );
+	void slotShowViewPeelJetOxySelect	( float a_fMouseX, float a_fMouseY );
 	void slotUpdateLifemark( QString a_strDeviceAnswer );
 	void slotValidateLifemark();
 	void slotSendLifemarkRequest();

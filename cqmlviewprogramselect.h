@@ -24,6 +24,8 @@ private:
 	void ManageButtonEMSClicked( float a_fMouseX, float a_fMouseY );
 	void ManageButtonGalwanClicked( float a_fMouseX, float a_fMouseY );
 	void ManageButtonVacuumClicked( float a_fMouseX, float a_fMouseY );
+	void ManageButtonQuitClicked( float a_fMouseX, float a_fMouseY );
+
 	CQmlTextButton* m_pButtonEMS;
 	CQmlTextButton* m_pButtonGalwan;
 	CQmlTextButton* m_pButtonQuit;

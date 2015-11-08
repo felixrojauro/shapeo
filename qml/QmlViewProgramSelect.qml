@@ -41,7 +41,7 @@ CQmlViewProgramSelect
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Wybór Programu"
+					text: "Zabiegi tlenowe"
 				}
 			}
 
