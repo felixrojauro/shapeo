@@ -57,17 +57,25 @@ class MyCommon : public QObject
 public:
 	explicit MyCommon(QObject *parent = 0);
 
+//	enum ConstantValues
+//	{
+//		SCREEN_WIDTH					= 1280
+//		, SCREEN_HEIGHT					= 800
+//		, FONT_SIZE_DEFAULT				= 24
+//		, FONT_SIZE_BUTTON				= 36
+//		, FONT_SIZE_SLIDER_DESCRIPTION	= 36
+//		, FONT_SIZE_TITLE				= 36
+//		, FONT_SIZE_CONNECTION_TEXT		= 28
+//	};
 	enum ConstantValues
 	{
-//		SCREEN_WIDTH					= 1024
-//		, SCREEN_HEIGHT					= 600
-		SCREEN_WIDTH					= 1280
-		, SCREEN_HEIGHT					= 800
-		, FONT_SIZE_DEFAULT				= 24
-		, FONT_SIZE_BUTTON				= 36
-		, FONT_SIZE_SLIDER_DESCRIPTION	= 36
-		, FONT_SIZE_TITLE				= 36
-		, FONT_SIZE_CONNECTION_TEXT		= 28
+		SCREEN_WIDTH					= 1024
+		, SCREEN_HEIGHT					= 600
+		, FONT_SIZE_DEFAULT				= 26
+		, FONT_SIZE_BUTTON				= 26
+		, FONT_SIZE_SLIDER_DESCRIPTION	= 26
+		, FONT_SIZE_TITLE				= 30
+		, FONT_SIZE_CONNECTION_TEXT		= 20
 	};
 	Q_ENUMS( ConstantValues )
 
