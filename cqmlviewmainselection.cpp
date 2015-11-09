@@ -43,7 +43,7 @@ void CQmlViewMainSelection::Initialize()
 	{
 		m_pButtonShapeo->SetPressedColor( MyCommon::COLOR_DARK_SELEDIN );
 		m_pButtonShapeo->SetNormalColor( MyCommon::COLOR_SELEDIN );
-		m_pButtonShapeo->SetButtonText( QObject::tr( "Shapeo" ) );
+		m_pButtonShapeo->SetButtonText( QObject::tr( "Zabiegi\ntlenowe" ) );
 		connect( m_pButtonShapeo, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
 		connect( m_pButtonShapeo, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
 	}
@@ -109,6 +109,7 @@ void CQmlViewMainSelection::ManageButtonPeelJetClicked( float a_fMouseX, float a
 
 void CQmlViewMainSelection::ManageButtonShapeoClicked( float a_fMouseX, float a_fMouseY )
 {
+	slotSendMessage( "OXYON" );
 //	slotSendMessage( "VACONLY" );
 	emit signalShowShapeo( a_fMouseX, a_fMouseY );
 }

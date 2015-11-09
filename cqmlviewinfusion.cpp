@@ -77,5 +77,6 @@ void CQmlViewInfusion::ManageBackButtonClicked( float a_fMouseX, float a_fMouseY
 		slotSendMessage( "STOP" );
 		m_pButtonPlay->setProperty( "state", QVariant( "start") );
 	}
-	emit signalBackToMainSelectionView( a_fMouseX, a_fMouseY );
+//	emit signalBackToMainSelectionView( a_fMouseX, a_fMouseY );
+	emit signalBackToProgramSelectView( a_fMouseX, a_fMouseY );
 }

@@ -12,8 +12,8 @@ public:
 	virtual void Initialize();
 
 signals:
-	void signalShowVacuum( float a_fMouseX, float a_fMouseY );
-	void signalShowGalwan( float a_fMouseX, float a_fMouseY );
+	void signalShowInfusion( float a_fMouseX, float a_fMouseY );
+	void signalShowOxyTreatment( float a_fMouseX, float a_fMouseY );
 	void signalShowEMS( float a_fMouseX, float a_fMouseY );
 public slots:
 	virtual void slotClicked( CClickableObject* a_pClickedObject );
@@ -22,13 +22,14 @@ public slots:
 private:
 
 	void ManageButtonEMSClicked( float a_fMouseX, float a_fMouseY );
-	void ManageButtonGalwanClicked( float a_fMouseX, float a_fMouseY );
-	void ManageButtonVacuumClicked( float a_fMouseX, float a_fMouseY );
+	void ManageButtonInfusionClicked( float a_fMouseX, float a_fMouseY );
+	void ManageButtonOxyTreatmentClicked( float a_fMouseX, float a_fMouseY );
 	void ManageButtonBackClicked(float a_fMouseX, float a_fMouseY);
+
 	CQmlTextButton* m_pButtonEMS;
-	CQmlTextButton* m_pButtonGalwan;
+	CQmlTextButton* m_pButtonOxyTreatment;
 	CQmlTextButton* m_pButtonBack;
-	CQmlTextButton* m_pButtonVacuum;
+	CQmlTextButton* m_pButtonInfusion;
 
 };
 

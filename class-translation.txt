@@ -1,0 +1,5 @@
+ProgramSelect -> Zabiegi tlenowe
+PeelJet -> PeelJet
+Vacuum -> Natlenianie (zmiana nazwy)
+Galwan -> Infuzja
+EMS -> EMS

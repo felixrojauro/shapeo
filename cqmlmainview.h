@@ -32,7 +32,7 @@ public:
 public slots:
 	void slotShowViewEMS( float a_fMouseX, float a_fMouseY );
 	void slotShowViewGalwan( float a_fMouseX, float a_fMouseY );
-	void slotShowViewVacuum( float a_fMouseX, float a_fMouseY );
+	void slotShowViewOxyTreatment( float a_fMouseX, float a_fMouseY );
 	void slotShowViewProgramSelect( float a_fMouseX, float a_fMouseY );
 
 	void slotShowViewMainSelection( float a_fMouseX, float a_fMouseY );
@@ -67,7 +67,7 @@ private:
 	CQmlViewEMS*			m_pViewEMS;
 	CQmlViewGalwan*			m_pViewGalwan;
 	CQmlViewProgramSelect*	m_pViewProgramSelect;
-	CQmlViewVacuum*			m_pViewVacuum;
+	CQmlViewVacuum*			m_pViewOxyTreatment;
 
 	CQmlViewMainSelection*	m_pViewMainSelection;
 	CQmlViewInfusion*		m_pViewInfusion;

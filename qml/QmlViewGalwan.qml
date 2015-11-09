@@ -40,18 +40,18 @@ CQmlViewGalwan
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Galwan"
+					text: "Natlenianie"
 				}
 
 			}
 
-			QmlSlider
-			{
-				id: id_slider_amplitude
-				objectName: id_viewGalwan.objectName + "_SliderAmplitude"
-				Layout.alignment: Qt.AlignCenter
-				Layout.preferredHeight: 100
-			}
+//			QmlSlider
+//			{
+//				id: id_slider_amplitude
+//				objectName: id_viewGalwan.objectName + "_SliderAmplitude"
+//				Layout.alignment: Qt.AlignCenter
+//				Layout.preferredHeight: 100
+//			}
 			QmlTextButton
 			{
 				id: id_button_PlayVacuum

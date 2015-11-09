@@ -45,7 +45,7 @@ CQmlViewVacuum
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Vacuum"
+					text: "Natlenianie"
 				}
 
 			}
@@ -111,6 +111,6 @@ CQmlViewVacuum
 	}
 	Component.onCompleted:
 	{
-		id_title.color = MyCommon.COLOR_KHAKI
+		id_title.color = MyCommon.COLOR_GREY
 	}
 }

@@ -41,7 +41,7 @@ CQmlViewProgramSelect
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Shapeo"
+					text: "Zabiegi tlenowe"
 				}
 			}
 
@@ -55,22 +55,20 @@ CQmlViewProgramSelect
 
 				QmlTextButton
 				{
-					id: id_button_Vacuum
-					objectName: id_viewProgramSelect.objectName + "_ButtonVacuum"
+					id: id_button_Infusion
+					objectName: id_viewProgramSelect.objectName + "_ButtonInfusion"
 
 					height: MyQMLEnums.SCREEN_HEIGHT / 6
 					width: MyQMLEnums.SCREEN_WIDTH / 5
 				}
-
 				QmlTextButton
 				{
-					id: id_button_Galwan
-					objectName: id_viewProgramSelect.objectName + "_Galwan"
+					id: id_button_OxyTreatment
+					objectName: id_viewProgramSelect.objectName + "_ButtonOxyTreatment"
 
 					height: MyQMLEnums.SCREEN_HEIGHT / 6
 					width: MyQMLEnums.SCREEN_WIDTH / 5
 				}
-
 				QmlTextButton
 				{
 					id: id_button_EMS

@@ -2,7 +2,7 @@ TEMPLATE = app
 
 QT += qml quick androidextras widgets core gui
 
-TARGET = SHAPEO
+TARGET = SHAPEO3
 SOURCES += main.cpp \
     clistitem.cpp \
     cqmlmainviewframe.cpp \

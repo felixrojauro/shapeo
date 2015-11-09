@@ -55,15 +55,6 @@ CQmlViewMainSelection
 
 				QmlTextButton
 				{
-					id: id_button_Infusion
-					objectName: id_viewMainSelection.objectName + "_ButtonInfusion"
-
-					height: MyQMLEnums.SCREEN_HEIGHT / 6
-					width: MyQMLEnums.SCREEN_WIDTH / 5
-				}
-
-				QmlTextButton
-				{
 					id: id_button_PeelJet
 					objectName: id_viewMainSelection.objectName + "_ButtonPeelJet"
 

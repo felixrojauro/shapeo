@@ -3,33 +3,33 @@
 CQmlViewProgramSelect::CQmlViewProgramSelect(QQuickItem *parent)
 	: CQmlViewBase(parent)
 	, m_pButtonEMS( 0 )
-	, m_pButtonGalwan( 0 )
+	, m_pButtonOxyTreatment( 0 )
 	, m_pButtonBack( 0 )
-	, m_pButtonVacuum( 0 )
+	, m_pButtonInfusion( 0 )
 {
 }
 
 void CQmlViewProgramSelect::Initialize()
 {
 	m_pButtonEMS = findChild<CQmlTextButton*>( objectName() + "_ButtonEMS" );
-	m_pButtonGalwan = findChild<CQmlTextButton*>( objectName() + "_Galwan" );
+	m_pButtonInfusion = findChild<CQmlTextButton*>( objectName() + "_ButtonInfusion" );
 	m_pButtonBack = findChild<CQmlTextButton*>( objectName() + "_ButtonQuit" );
-	m_pButtonVacuum = findChild<CQmlTextButton*>( objectName() + "_ButtonVacuum" );
+	m_pButtonOxyTreatment = findChild<CQmlTextButton*>( objectName() + "_ButtonOxyTreatment" );
 	if ( m_pButtonEMS )
 	{
 		m_pButtonEMS->SetPressedColor( MyCommon::COLOR_BEIGE );
 		m_pButtonEMS->SetNormalColor( MyCommon::COLOR_LIGHT_BEIGE );
-		m_pButtonEMS->SetButtonText( QObject::tr( "EMS" ) );
+		m_pButtonEMS->SetButtonText( QObject::tr( "Oxy Massage" ) );
 		connect( m_pButtonEMS, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
 		connect( m_pButtonEMS, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
 	}
-	if ( m_pButtonGalwan )
+	if ( m_pButtonOxyTreatment )
 	{
-		m_pButtonGalwan->SetPressedColor( MyCommon::COLOR_GREY );
-		m_pButtonGalwan->SetNormalColor( MyCommon::COLOR_LIGHT_GREY );
-		m_pButtonGalwan->SetButtonText( QObject::tr( "Galwan" ) );
-		connect( m_pButtonGalwan, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
-		connect( m_pButtonGalwan, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
+		m_pButtonOxyTreatment->SetPressedColor( MyCommon::COLOR_GREY );
+		m_pButtonOxyTreatment->SetNormalColor( MyCommon::COLOR_LIGHT_GREY );
+		m_pButtonOxyTreatment->SetButtonText( QObject::tr( "Natlenianie" ) );
+		connect( m_pButtonOxyTreatment, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
+		connect( m_pButtonOxyTreatment, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
 	}
 	if ( m_pButtonBack )
 	{
@@ -39,13 +39,13 @@ void CQmlViewProgramSelect::Initialize()
 		connect( m_pButtonBack, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
 		connect( m_pButtonBack, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
 	}
-	if ( m_pButtonVacuum )
+	if ( m_pButtonInfusion )
 	{
-		m_pButtonVacuum->SetPressedColor( MyCommon::COLOR_KHAKI );
-		m_pButtonVacuum->SetNormalColor( MyCommon::COLOR_LIGHT_KHAKI );
-		m_pButtonVacuum->SetButtonText( QObject::tr( "Vacuum" ) );
-		connect( m_pButtonVacuum, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
-		connect( m_pButtonVacuum, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
+		m_pButtonInfusion->SetPressedColor( MyCommon::COLOR_KHAKI );
+		m_pButtonInfusion->SetNormalColor( MyCommon::COLOR_LIGHT_KHAKI );
+		m_pButtonInfusion->SetButtonText( QObject::tr( "Infuzja" ) );
+		connect( m_pButtonInfusion, SIGNAL(signalClicked(CClickableObject*)), this, SLOT( slotClicked(CClickableObject*)) );
+		connect( m_pButtonInfusion, SIGNAL(signalClicked(CClickableObject*,float,float)), this, SLOT( slotClicked(CClickableObject*,float,float)) );
 	}
 }
 
@@ -57,17 +57,17 @@ void CQmlViewProgramSelect::slotClicked(CClickableObject* a_pClickedObject)
 		{
 			ManageButtonEMSClicked( 500, 500 );
 		}
-		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonGalwan )
+		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonOxyTreatment )
 		{
-			ManageButtonGalwanClicked( 500, 50 );
+			ManageButtonOxyTreatmentClicked( 50, 500 );
 		}
 		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonBack )
 		{
 			ManageButtonBackClicked( 700, 500 );
 		}
-		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonVacuum )
+		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonInfusion )
 		{
-			ManageButtonVacuumClicked( 50, 500 );
+			ManageButtonInfusionClicked( 500, 50 );
 		}
 	}
 }
@@ -80,17 +80,17 @@ void CQmlViewProgramSelect::slotClicked( CClickableObject* a_pClickedObject, flo
 		{
 			ManageButtonEMSClicked( a_fMouseX, a_fMouseY );
 		}
-		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonGalwan )
+		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonOxyTreatment )
 		{
-			ManageButtonGalwanClicked( a_fMouseX, a_fMouseY );
+			ManageButtonOxyTreatmentClicked( a_fMouseX, a_fMouseY );
 		}
 		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonBack )
 		{
 			ManageButtonBackClicked( a_fMouseX, a_fMouseY );
 		}
-		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonVacuum )
+		else if ( static_cast<CQmlTextButton*>( a_pClickedObject ) == m_pButtonInfusion )
 		{
-			ManageButtonVacuumClicked( a_fMouseX, a_fMouseY );
+			ManageButtonInfusionClicked( a_fMouseX, a_fMouseY );
 		}
 	}
 }
@@ -101,19 +101,20 @@ void CQmlViewProgramSelect::ManageButtonEMSClicked( float a_fMouseX, float a_fMo
 	emit signalShowEMS( a_fMouseX, a_fMouseY );
 }
 
-void CQmlViewProgramSelect::ManageButtonGalwanClicked( float a_fMouseX, float a_fMouseY )
+void CQmlViewProgramSelect::ManageButtonInfusionClicked( float a_fMouseX, float a_fMouseY )
 {
-	slotSendMessage( "GALWAN" );
-	emit signalShowGalwan( a_fMouseX, a_fMouseY );
+	slotSendMessage( "INFUSION" );
+	emit signalShowInfusion( a_fMouseX, a_fMouseY );
 }
 
-void CQmlViewProgramSelect::ManageButtonVacuumClicked( float a_fMouseX, float a_fMouseY )
+void CQmlViewProgramSelect::ManageButtonOxyTreatmentClicked( float a_fMouseX, float a_fMouseY )
 {
 	slotSendMessage( "VACONLY" );
-	emit signalShowVacuum( a_fMouseX, a_fMouseY );
+	emit signalShowOxyTreatment( a_fMouseX, a_fMouseY );
 }
 
 void CQmlViewProgramSelect::ManageButtonBackClicked( float a_fMouseX, float a_fMouseY )
 {
+	slotSendMessage( "OXYOFF" );
 	emit signalBackToMainSelectionView( a_fMouseX, a_fMouseY );
 }

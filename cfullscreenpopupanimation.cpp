@@ -91,6 +91,7 @@ bool CFullScreenPopupAnimation::PrepareAnimation()
 */
 bool CFullScreenPopupAnimation::StartAnimation( bool a_bShow, int a_iDuration )
 {
+	qDebug() << "gonna show?" << a_bShow << " who? " << m_pTargetWidget->objectName();
 	if ( a_bShow == m_pTargetWidget->isVisible() && m_bShow == a_bShow )
 	{
 		qDebug()<<"m_pTargetWidget: "<<m_pTargetWidget->objectName()<<" my Z: "<<m_pTargetWidget->z()<<" already good";

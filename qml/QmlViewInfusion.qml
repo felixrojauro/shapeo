@@ -44,7 +44,7 @@ CQmlViewInfusion
 					font.family: MyCommon.FONT_FAMILY_DEFAULT
 					font.bold: true
 					color: "white"
-					text: "Infusion"
+					text: "Infuzja"
 				}
 
 			}
@@ -110,6 +110,6 @@ CQmlViewInfusion
 	}
 	Component.onCompleted:
 	{
-		id_title.color = MyCommon.COLOR_SHIT_YELLOW
+		id_title.color = MyCommon.COLOR_KHAKI
 	}
 }

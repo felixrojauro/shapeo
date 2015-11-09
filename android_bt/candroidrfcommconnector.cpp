@@ -67,7 +67,7 @@ void CAndroidRFCOMMConnector::slotProcess()
 
 void CAndroidRFCOMMConnector::slotSendMessage(const QString a_strMessage)
 {
-//	qDebug()<<"send message: "<<a_strMessage;
+	qDebug()<<"send message: "<<a_strMessage;
 	if ( rfcomm.isConnected() )
 	{
 		rfcomm.sendLine( a_strMessage );

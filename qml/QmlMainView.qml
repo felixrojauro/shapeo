@@ -11,23 +11,23 @@ CQmlMainView
 	QmlViewVacuum
 	{
 		id: id_vacuum
-		objectName: id_mainView.objectName + "_ViewVacuum"
+		objectName: id_mainView.objectName + "_ViewOxyTreatment"
 		x: 0
 		y: 0
 		width: id_mainView.width
 		height: id_mainView.height
 //		anchors.fill: id_mainView
 	}
-	QmlViewGalwan
-	{
-		id: id_galwan
-		objectName: id_mainView.objectName + "_ViewGalwan"
-		x: 0
-		y: 0
-		width: id_mainView.width
-		height: id_mainView.height
-//		anchors.fill: id_mainView
-	}
+//	QmlViewGalwan
+//	{
+//		id: id_galwan
+//		objectName: id_mainView.objectName + "_ViewGalwan"
+//		x: 0
+//		y: 0
+//		width: id_mainView.width
+//		height: id_mainView.height
+////		anchors.fill: id_mainView
+//	}
 	QmlViewEMS
 	{
 		id: id_ems
@@ -94,6 +94,4 @@ CQmlMainView
 		visible: true
 		state: id_mainView.m_strAppState
 	}
-
-
 }
