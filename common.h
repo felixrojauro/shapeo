@@ -59,8 +59,6 @@ public:
 
 	enum ConstantValues
 	{
-//		SCREEN_WIDTH					= 1024
-//		, SCREEN_HEIGHT					= 600
 		SCREEN_WIDTH					= 1280
 		, SCREEN_HEIGHT					= 800
 		, FONT_SIZE_DEFAULT				= 24
